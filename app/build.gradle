@@ -19,11 +19,16 @@ android {
 }
 
 dependencies {
+    def supportVersion = '27.1.1'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation "com.android.support:appcompat-v7:$supportVersion"
+    implementation "com.android.support:recyclerview-v7:$supportVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.1.1'
     implementation 'org.simpleframework:simple-xml:2.7.1'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation ('com.squareup.retrofit2:converter-simplexml:2.1.0') {exclude module: 'stax-api'}
+    implementation 'com.facebook.fresco:fresco:1.9.0'
+    implementation 'org.greenrobot:eventbus:3.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

@@ -3,8 +3,8 @@ package com.example.alex.rssfeed.news;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
-@Root(name = "catefory", strict = false)
+@Root(name = "Category", strict = false)
 public class Category {
-    @Element(name = "category")
+    @Element(data = true, name = "category")
     private String category;
 }

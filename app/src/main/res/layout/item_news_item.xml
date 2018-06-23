@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:layout_margin="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_highlight_press">
+        <com.facebook.drawee.view.SimpleDraweeView
+            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/simpleDraweeView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            fresco:placeholderImage="@drawable/placeholder_image"
+            fresco:failureImage="@drawable/no_image"
+            fresco:failureImageScaleType="centerInside"/>
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/simpleDraweeView"
+            android:layout_above="@+id/textViewDate"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="Multiline Title"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/primary_text" />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/simpleDraweeView"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="right"
+            android:padding="5dp"
+            android:text="Date"
+            android:textColor="@color/secondary_text"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
